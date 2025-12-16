@@ -19,16 +19,16 @@ function NavItem({ to, label, emoji }: { to: string; label: string; emoji: strin
 // Create the navbar component
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 border-b max-w-screen">
+    <div className="navbar border-b max-w-screen">
       <div className="mx-auto max-w-screen w-screen flex flex-row">
-        <div className="flex-1">
-          <NavLink to="/repos" className="btn btn-ghost md:text-xl text-md">
-            <img src={algoLogo} alt="Algorand Logo" className="h-8 w-8 mr-2 dark:invert" />
+        <div className="flex-1 my-auto">
+          <NavLink to="/repos" className="btn-sm md:text-xl text-md flex flex-row font-bold mx-4">
+            <img src={algoLogo} alt="Algorand Logo" className="h-6 w-6 mr-4 dark:invert text-xs my-auto" />
             Algorand Repo Explorer
           </NavLink>
         </div>
 
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 md:mx-4 my-2">
           <NavItem to="/repos" label="Repos" emoji="📦"/>
           <NavItem to="/favorites" label="Favorites" emoji="❤️" />
         </div>
