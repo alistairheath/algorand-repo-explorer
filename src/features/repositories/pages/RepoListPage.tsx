@@ -76,7 +76,7 @@ export default function RepoListPage() {
 
         {!online && (
           <div className="alert alert-warning py-2">
-            <span>You’re offline — showing whatever is already loaded.</span>
+            <span>You’re offline. Showing cached and loaded results.</span>
           </div>
         )}
       </div>
@@ -146,28 +146,38 @@ export default function RepoListPage() {
 
             {/* Right-side filters shrink */}
             <div className="flex gap-3 md:justify-end">
-              <select
-                className="select select-bordered w-full md:w-auto md:min-w-44"
-                value={sort}
-                onChange={(e) => setSort(e.target.value as RepoSort)}
-              >
-                <option value="updated">Recently Updated</option>
-                <option value="stars">Stars</option>
-                <option value="name">Name</option>
-              </select>
+              <div className="relative flex-grow">
+                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 z-12">
+                  ↕️
+                </span>
+                <select
+                  className="select select-bordered w-full md:w-auto min-w-44 pl-10"
+                  value={sort}
+                  onChange={(e) => setSort(e.target.value as RepoSort)}
+                >
+                  <option value="updated">Recently Updated</option>
+                  <option value="stars">Stars</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
 
-              <select
-                className="select select-bordered w-full md:w-auto md:min-w-44"
-                value={language}
-                onChange={(e) => setLanguage(e.target.value)}
-              >
-                <option value="all">All Languages</option>
-                {languages.map((l) => (
-                  <option key={l} value={l}>
-                    {l}
-                  </option>
-                ))}
-              </select>
+              <div className="relative flex-grow">
+                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 z-12">
+                  🌐
+                </span>
+                <select
+                  className="select select-bordered w-full md:w-auto min-w-44 pl-10"
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value)}
+                >
+                  <option value="all">All Languages</option>
+                  {languages.map((l) => (
+                    <option key={l} value={l}>
+                      {l}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
         </div>
