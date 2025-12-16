@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-screen w-screen flex flex-row">
         <div className="flex-1">
           <NavLink to="/repos" className="btn btn-ghost md:text-xl text-md">
-            <img src={algoLogo} alt="Algorand Logo" className="h-8 w-8 mr-2" />
+            <img src={algoLogo} alt="Algorand Logo" className="h-8 w-8 mr-2 dark:invert" />
             Algorand Repo Explorer
           </NavLink>
         </div>
