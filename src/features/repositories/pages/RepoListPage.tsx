@@ -82,7 +82,7 @@ export default function RepoListPage() {
       </div>
 
       {/* Filters */}
-      <div className="card bg-base-100 my-12">
+      <div className="card my-12">
         <div className="card-body gap-4 p-0">
           {/* ORG CHIPS */}
           <div className="flex flex-wrap gap-2">
@@ -145,13 +145,13 @@ export default function RepoListPage() {
             </label>
 
             {/* Right-side filters shrink */}
-            <div className="flex gap-3 md:justify-end">
-              <div className="relative flex-grow">
+            <div className="flex flex-row gap-3 md:justify-end">
+              <div className="relative flex-grow md:min-w-44">
                 <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 z-12">
-                  ↕️
+                  ⬇️
                 </span>
                 <select
-                  className="select select-bordered w-full md:w-auto min-w-44 pl-10"
+                  className="select select-bordered w-full pl-10"
                   value={sort}
                   onChange={(e) => setSort(e.target.value as RepoSort)}
                 >
@@ -161,12 +161,12 @@ export default function RepoListPage() {
                 </select>
               </div>
 
-              <div className="relative flex-grow">
+              <div className="relative flex-grow md:min-w-44">
                 <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 z-12">
                   🌐
                 </span>
                 <select
-                  className="select select-bordered w-full md:w-auto min-w-44 pl-10"
+                  className="select select-bordered w-full pl-10"
                   value={language}
                   onChange={(e) => setLanguage(e.target.value)}
                 >
