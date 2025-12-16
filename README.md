@@ -4,7 +4,7 @@ Algorand Repo Explorer is a React application that allows users to browse GitHub
 
 ## View the App
 
-A demo of the app is available at http://wkgc80848w4cwosg804s8k0c.167.99.92.196.sslip.io and is deployed via Coolify. Any updates to the main branch of this repo are automatically deployed via this pipeline.
+A demo of the app is available at https://algorand-repo-explorer.setba.se/ and is deployed via Coolify. Any updates to the main branch of this repo are automatically deployed via this pipeline.
 
 ![Image](public/screenshot_01.png)
 
@@ -108,7 +108,7 @@ The app prioritizes perceived performance through caching, debounced inputs, and
 
 ### 12. Deployment
 
-The app is deployed via Coolify to http://wkgc80848w4cwosg804s8k0c.167.99.92.196.sslip.io. Coolify has been used as the CI/CD pipeline to achieve this. It listens to changes on the main branch and then runs the build command to deploy it to our server.
+The app is deployed via Coolify to https://algorand-repo-explorer.setba.se. Coolify has been used as the CI/CD pipeline to achieve this. It listens to changes on the main branch and then runs the build command to deploy it to our server.
 
 ### 13. Known Limitations & Future Improvements
 The app currently uses unauthenticated GitHub requests and is subject to public rate limits. Server-side pagination and authenticated requests could further improve scalability. Additional enhancements could include PWA support or virtualized lists for very large datasets.
