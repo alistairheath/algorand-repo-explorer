@@ -104,7 +104,7 @@ export default function RepoDetailPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2 text-sm opacity-80 my-6">
-            {repo.language && <span className="badge badge-outline">{repo.language}</span>}
+            {repo.language && <span className="badge badge-primary">{repo.language}</span>}
             {repo.archived && <span className="badge badge-neutral">Archived</span>}
             {repo.fork && <span className="badge badge-ghost">Fork</span>}
             <span>Updated {formatTimeAgo(repo.updated_at)}</span>
