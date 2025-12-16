@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
 import { useFavoritesStore } from "../store";
 import RepoCard from "../../repositories/components/RepoCard";
 
