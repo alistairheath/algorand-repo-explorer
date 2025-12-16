@@ -26,18 +26,18 @@ export default function RepoCard({ repo }: { repo: GitHubRepo }) {
     >
       <div className="card-body gap-3">
         <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0 max-w-full pr-32">
+          <div className="min-w-0 max-w-full flex flex-col gap-3">
+            {repo.language && <span className="badge badge-primary my-auto">{repo.language}</span>}
             <Link
               to={`/repos/${owner}/${repo.name}`}
-              className="link link-hover font-semibold text-xl break-words"
+              className="link link-hover font-semibold text-xl break-words h-[2em]"
               >
               {repo.name}
             </Link>
-            <div className="text-sm opacity-70">{repo.full_name}</div>
+            <div className="text-sm opacity-70 h-[2em]">{repo.full_name}</div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 absolute top-4 right-4">
-            {repo.language && <span className="badge badge-bprimary my-auto">{repo.language}</span>}
             <FavoriteButton fullName={repo.full_name} repoForToggle={repo} size="sm" />
           </div>
         </div>
