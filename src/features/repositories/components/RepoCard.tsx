@@ -26,7 +26,7 @@ export default function RepoCard({ repo }: { repo: GitHubRepo }) {
     >
       <div className="card-body gap-3">
         <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
+          <div className="min-w-0 max-w-full pr-32">
             <Link
               to={`/repos/${owner}/${repo.name}`}
               className="link link-hover font-semibold text-xl break-words"
